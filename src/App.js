@@ -3,7 +3,8 @@ import './App.css';
 //import Hello from './01/Hello';
 //import MyDiv1 from './02/MyDiv1';
 import { IoIosHome } from "react-icons/io";
-import CardMain from './03/CardMain';
+//import CardMain from './03/CardMain';
+import BoxOffice from './04/BoxOffice';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <div className="w-full grow">
           {/* <Hello/> */}
           {/* <MyDiv1 /> */}
-          <CardMain/>
+          {/* <CardMain/> */}
+          <BoxOffice/>
         </div>
         <footer className='w-full h-16 flex justify-center items-center bg-black text-slate-200'>
           <p className='text-sm font-bold'>2024 여름계절 소프트웨어융합기초1 </p>
