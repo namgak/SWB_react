@@ -4,6 +4,19 @@ export default function BoxOffice() {
     //JSON DATA 저장 변수
     const [tdata, setTdata] = useState([]);
     const [tags, setTags] = useState([]);
+    const[selMv, setSelMv]=useState();
+    const inRef =unRef();
+
+    //영화가 선택되었을 때
+    const handleSelMv=(mv)=>{
+        console.log(mv)
+        let tm= <>
+        <span>{mv.movieNm}</span>
+        </>
+        setSelMv(tm)
+    }
+    //날짜가 선택될 때
+    
 
     //컴포넌트 생성 시
     useEffect(() => {
@@ -25,7 +38,7 @@ export default function BoxOffice() {
 
         console.log(tdata)
         let tm = tdata.map(item =>
-            <tr className="bg-white border-b hover:bg-gray-50 font-bold key={item.movieCd}">
+            <tr className="bg-white border-b hover:bg-gray-50 onclick font-bold key={item.movieCd}">
                 <th scope="row" className="px-6 py-2 font-medium text-gray-900 whitespace-nowrap ">
                     {item.rank}
                 </th>
